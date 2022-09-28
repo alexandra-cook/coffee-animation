@@ -1,0 +1,107 @@
+body {
+    background-color: #1c9c9c;
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    padding-top: 400px;
+}
+
+/* Creating the coffee cup */
+
+#coffeecup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 150px;
+    height: 160px;
+    background-color: #fff;
+    border-bottom-left-radius: 20px;
+        border-bottom-right-radius:  20px;
+}
+
+ /* Creating the coffee */
+
+ #coffeecup:before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #8A624A;
+    border:7px solid #fff;
+    box-sizing:border-box;
+    transform:translateY(-50%);
+    box-shadow:inset 0 0 15px rgba(0,0,0,0.5);
+ }
+
+/* Creating the cup handle */
+
+#coffeecup:after{
+    content: "";
+    position: absolute;
+    top:48%;
+    right: -50px;
+    height: 90px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: transparent;
+    border:12px solid #fff;
+    box-sizing:border-box;
+    transform:translateY(-50%);
+ }
+
+ /* Creating the plate */
+
+ #plate{
+    width:250px;
+    height:30px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background-color: #fff;
+    position: absolute;
+    top: 162px;
+    transform:translateX(-50px);
+    box-shadow: 4px 4px 10px #aeacaf;
+ }
+
+ /* Creating the steam */
+
+ ul{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    top:-50px;
+    transform:translateX(10%);
+    width:100%;
+ }
+
+ ul li{
+    list-style-type: none;
+    width: 2px;
+    height: 40px;
+    background-color: #fff;
+    float: left;
+    margin: 10px;
+    animation:steam 2s linear infinite;
+ }
+
+ @keyframes steam{
+    0% {
+        transform:translateY(0);
+        opacity:1;
+        filter:blue(3px);
+    }
+    100%{
+        transform:translateY(-80px);
+        opacity: 0;
+        filter:blur(5px);
+    }
+ }
+
